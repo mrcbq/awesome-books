@@ -7,12 +7,9 @@ form *{
 }
 
 .book-list{
-    border-bottom: 1px black solid;
-    padding-bottom: 1vh;
-}
-
-#form-add_book{
-    padding-top: 1vh;
+    border-radius: 8px;
+    width: 50vw;
+    margin: 0 auto;
 }
 
 ul {
@@ -26,5 +23,24 @@ li {
 }
 
 #form {
-    padding-inline-start: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 25vw;
+    margin: 0 auto;
 }
+
+#form button{
+    align-self: flex-end;
+}
+
+.book {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .main-title , .form-title {
+    text-align: center;
+  }
