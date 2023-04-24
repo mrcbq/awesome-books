@@ -8,8 +8,21 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <main>
-        <h1 class="main-title">Awesome Books</h1>
+    <header>            
+        <div class="header">
+            <h2 class="header-title">Awesome Books</h2>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#" id="navList">List</a></li>
+                    <li><a href="#" id="navNew">Add New</a></li>
+                    <li><a href="#" id="navContact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p id="date" class="date"></p>
+    </header>
+    <main>        
+        <h1 class="main-title">All Awesome Books</h1>
         <div class="book-list">
             <ul id="book-list">
             </ul>
@@ -22,9 +35,21 @@
             <button id="btn-add" type="button">Add</button>
         </form>
         </div>
-
+        <div id="contact" class="contact">
+            <p>
+              Do you have any questions or you just want to say "Hello".
+              You can reach us to.
+            </p>
+            <ul>
+              <li>Our email: <a href="#">mail@mail.com</a></li>
+              <li>Our phone number: <a href="#">0043586534422</a></li>
+              <li>Our adress: <a href="#">Streetname 22, 84503 City, Country</a></li>
+            </ul>
+          </div>
     </main>
-
+    <footer class="footer">
+        <h3>Copyright &copy;</h3>
+      </footer>
     <script src="js/app.js"></script>
 </body>
 </html>
