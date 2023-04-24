@@ -1,4 +1,7 @@
 let Books = JSON.parse(localStorage.getItem('Books' || '[]'));
+if (Books === null) {
+  Books = [];
+}
 
 function removeBook(title) {
   const book = document.getElementById(title);
