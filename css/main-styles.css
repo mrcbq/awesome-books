@@ -27,12 +27,13 @@ li {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    width: 25vw;
+    width: 35vw;
     margin: 0 auto;
 }
 
 #form button{
     align-self: flex-end;
+    width: 5vw;
 }
 
 .book {
