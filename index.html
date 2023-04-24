@@ -9,23 +9,19 @@
 </head>
 <body>
     <main>
-
-        <h1>Awesome Books</h1>
-
+        <h1 class="main-title">Awesome Books</h1>
         <div class="book-list">
-            <!-- <p>Lorem Ipsum</p>
-            <p>Testeroo Testyy</p>
-            <button>Remove</button> -->
+            <ul id="book-list">
+            </ul>
         </div>
-
-        <div class="book-dinamic_list">
-        </div>
-
-        <form id="form-add_book">
-            <input type="text" placeholder="Title" id="title"> <br>
-            <input type="text" placeholder="Author" id="author"> <br>
-            <button id="btn-add">Add</button>
+        <div id="form-add_book">
+            <h2 class="form-title">Add a new book</h2>
+        <form action="#" method="post" id="form" >
+            <input type="text" placeholder="Title" id="book-title"> <br>
+            <input type="text" placeholder="Author" id="book-author"> <br>
+            <button id="btn-add" type="button">Add</button>
         </form>
+        </div>
 
     </main>
 
