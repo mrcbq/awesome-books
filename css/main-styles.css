@@ -1,0 +1,12 @@
+form *{
+    display: block;
+}
+
+.book-list{
+    border-bottom: 1px black solid;
+    padding-bottom: 1vh;
+}
+
+#form-add_book{
+    padding-top: 1vh;
+}
