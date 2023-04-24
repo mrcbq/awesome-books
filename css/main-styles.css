@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 form *{
     display: block;
 }
@@ -9,4 +13,18 @@ form *{
 
 #form-add_book{
     padding-top: 1vh;
+}
+
+ul {
+    width: 50vw;
+}
+
+li {
+    list-style: none;
+    border-bottom: 1px rgb(140, 140, 140) solid;
+    padding-bottom: 1.5vh;
+}
+
+#form {
+    padding-inline-start: 40px;
 }
