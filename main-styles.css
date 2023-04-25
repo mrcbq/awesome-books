@@ -17,6 +17,7 @@ ul {
   flex-direction: column;
   border: 2px solid;
   padding: 0;
+  box-shadow: 4px 0 1px 0px black;
 }
 
 li {
@@ -47,16 +48,19 @@ li {
 }
 
 form input {
-  border: 2px solid;
+  border: 3px solid;  
 }
 
 button {
-  width: 5rem;
+  height: 2rem;
+  align-self: center;
   border: 2px solid;
+  box-shadow: 2px 0 1px 0px black;
 }
 
 form button {
   align-self: flex-end;
+  width: 3rem;
 }
 
 .main-title,
