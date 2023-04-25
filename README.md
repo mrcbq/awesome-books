@@ -150,8 +150,6 @@ GH Pages, publish the branch in git Hub pages
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - [ ] **Use Classes**
 - [ ] **Add Navigation**
 - [ ] **Add Contact**
