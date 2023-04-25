@@ -1,16 +1,13 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable class-methods-use-this */
+
 let Books = JSON.parse(localStorage.getItem('Books')) ?? [];
 
 class Book {
   constructor(title, author) {
-    // this.id = Books.length;
+    this.id = Books.length;
     this.title = title;
     this.author = author;
-  }
-
-  id = Books.length;
-
-  get id() {
-    return id;
   }
 }
 
