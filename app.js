@@ -51,13 +51,11 @@ const form = document.querySelector('#form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const title = document.getElementById('book-title').value;
-  // Capitalize first letter of title value
-  const titleUC = title.charAt(0).toUpperCase() + title.slice(1);
+  const titleUC = title.charAt(0).toUpperCase() + title.slice(1); // Capitalize first letter of title value
   const author = document.getElementById('book-author').value;
-  // Capitalize first letter of each word of author value
   const arrAuthor = author.split(" ");
   for (var i = 0; i < arrAuthor.length; i++) {
-    arrAuthor[i] = arrAuthor[i].charAt(0).toUpperCase() + arrAuthor[i].slice(1);
+    arrAuthor[i] = arrAuthor[i].charAt(0).toUpperCase() + arrAuthor[i].slice(1); // Capitalize first letter of each word of author value
   }
   const authorUC = arrAuthor.join(" ");
   if ((title && author) !== '') {
@@ -80,10 +78,11 @@ listBtn.addEventListener('click', () => {
   bookList.style.display = 'block';
   formContainer.style.display = 'none';
   contactInfo.style.display = 'none';
+  displayBook();
 });
 
 window.addEventListener('load', () => {
-  bookList.style.display = 'block';
+  bookList.style.display = 'none';
   formContainer.style.display = 'none';
   contactInfo.style.display = 'none';
 });
@@ -106,5 +105,3 @@ contactBtn.addEventListener('click', () => {
   formContainer.style.display = 'none';
   contactInfo.style.display = 'block';
 });
-
-displayBook();
