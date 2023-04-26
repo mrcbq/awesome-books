@@ -168,3 +168,8 @@ a:hover {
   font-size: 1vw;
   line-height: 3vh;
 }
+
+.footer a{
+  text-decoration: none;
+  color: blueviolet;
+}
