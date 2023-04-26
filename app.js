@@ -51,13 +51,15 @@ const form = document.querySelector('#form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const title = document.getElementById('book-title').value;
-  const titleUC = title.charAt(0).toUpperCase() + title.slice(1); // Capitalize first letter of title value
+  // Capitalize first letter of title value
+  const titleUC = title.charAt(0).toUpperCase() + title.slice(1);
   const author = document.getElementById('book-author').value;
-  const arrAuthor = author.split(" ");
-  for (var i = 0; i < arrAuthor.length; i++) {
-    arrAuthor[i] = arrAuthor[i].charAt(0).toUpperCase() + arrAuthor[i].slice(1); // Capitalize first letter of each word of author value
+  const arrAuthor = author.split(' ');
+  // Capitalize first letter of each word of author value
+  for (let i = 0; i < arrAuthor.length; i += 1) {
+    arrAuthor[i] = arrAuthor[i].charAt(0).toUpperCase() + arrAuthor[i].slice(1);
   }
-  const authorUC = arrAuthor.join(" ");
+  const authorUC = arrAuthor.join(' ');
   if ((title && author) !== '') {
     const book = new Book(titleUC, authorUC);
     const library = new Library(book);
@@ -67,12 +69,17 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-//NAVBAR LINKS
+// NAVBAR LINKS
 
 // List - Link
 const bookList = document.querySelector('.book-list-container');
 const listBtn = document.querySelector('.navList');
 const formContainer = document.querySelector('.form');
+// Add New - Link
+const addNewBtn = document.querySelector('.navNew');
+// Contact - Link
+const contactBtn = document.querySelector('.navContact');
+const contactInfo = document.querySelector('.contact');
 
 listBtn.addEventListener('click', () => {
   bookList.style.display = 'block';
@@ -87,18 +94,11 @@ window.addEventListener('load', () => {
   contactInfo.style.display = 'none';
 });
 
-// Add New - Link
-const addNewBtn = document.querySelector('.navNew');
-
 addNewBtn.addEventListener('click', () => {
   bookList.style.display = 'none';
   formContainer.style.display = 'block';
   contactInfo.style.display = 'none';
 });
-
-// Contact - Link
-const contactBtn = document.querySelector('.navContact');
-const contactInfo = document.querySelector('.contact');
 
 contactBtn.addEventListener('click', () => {
   bookList.style.display = 'none';
@@ -106,5 +106,7 @@ contactBtn.addEventListener('click', () => {
   contactInfo.style.display = 'block';
 });
 
-const currentDate = new Date().toLocaleString('default', {month:'long', year:'numeric', day:'numeric', hour: 'numeric', minute:'numeric', second:'numeric', hour12:true});
+const currentDate = new Date().toLocaleString('default', {
+  month: 'long', year: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
+});
 document.getElementById('date').innerHTML = currentDate;

@@ -156,7 +156,6 @@ a:hover {
 
 .contact-ul-li {
   display: list-item;
-  text-align: -webkit-match-parent;
   border: none;
   padding: 0;
   list-style: disc;
