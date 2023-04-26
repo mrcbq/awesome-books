@@ -7,19 +7,36 @@ form * {
 }
 
 .book-list {
-  border-radius: 8px;
   width: 50vw;
   margin: 0 auto;
 }
 
 ul {
   width: 50vw;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  padding: 0;
+  box-shadow: 4px 0 1px 0 black;
+  border-radius: 10px;
 }
 
 li {
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  border-bottom: 1px rgb(140, 140, 140) solid;
-  padding-bottom: 1.5vh;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.light {
+  background-color: rgb(250, 248, 245);
+}
+
+.dark {
+  background-color: rgb(142, 142, 142);
 }
 
 #form {
@@ -31,18 +48,32 @@ li {
   margin: 0 auto;
 }
 
-#form button {
-  align-self: flex-end;
-  width: 5vw;
+form input {
+  border: 3px solid;
+  border-radius: 7px;
+  font-size: 1rem;
 }
 
-.book {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+button {
+  height: 2rem;
+  align-self: center;
+  border: 2px solid;
+  box-shadow: 2px 0 1px 0 black;
+  border-radius: 5px;
+}
+
+form button {
+  align-self: flex-end;
+  width: 3rem;
 }
 
 .main-title,
 .form-title {
   text-align: center;
+}
+
+.line-above-form {
+  margin: 0 auto;
+  border-bottom: 2px solid #000;
+  width: 5rem;
 }
