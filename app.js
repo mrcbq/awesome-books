@@ -57,6 +57,7 @@ form.addEventListener('submit', (e) => {
     const book = new Book(title, author);
     const library = new Library(book);
     library.addBook();
+    form.reset();
     displayBook();
   }
 });
