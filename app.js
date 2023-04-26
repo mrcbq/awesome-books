@@ -69,4 +69,42 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+//NAVBAR LINKS
+
+// List - Link
+const bookList = document.querySelector('.book-list-container');
+const listBtn = document.querySelector('.navList');
+const formContainer = document.querySelector('.form');
+
+listBtn.addEventListener('click', () => {
+  bookList.style.display = 'block';
+  formContainer.style.display = 'none';
+  contactInfo.style.display = 'none';
+});
+
+window.addEventListener('load', () => {
+  bookList.style.display = 'block';
+  formContainer.style.display = 'none';
+  contactInfo.style.display = 'none';
+});
+
+// Add New - Link
+const addNewBtn = document.querySelector('.navNew');
+
+addNewBtn.addEventListener('click', () => {
+  bookList.style.display = 'none';
+  formContainer.style.display = 'block';
+  contactInfo.style.display = 'none';
+});
+
+// Contact - Link
+const contactBtn = document.querySelector('.navContact');
+const contactInfo = document.querySelector('.contact');
+
+contactBtn.addEventListener('click', () => {
+  bookList.style.display = 'none';
+  formContainer.style.display = 'none';
+  contactInfo.style.display = 'block';
+});
+
 displayBook();
