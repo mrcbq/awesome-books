@@ -1,6 +1,3 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable class-methods-use-this */
-
 let Books = JSON.parse(localStorage.getItem('Books')) ?? [];
 
 class Book {
@@ -21,8 +18,8 @@ class Library {
     localStorage.setItem('Books', JSON.stringify(Books));
   }
 
-  removeBook(book) {
-    Books = Books.filter((bookObj) => bookObj.id !== book.id);
+  removeBook() {
+    Books = Books.filter((bookObj) => bookObj.id !== this.book.id);
     localStorage.setItem('Books', JSON.stringify(Books));
   }
 }
@@ -39,9 +36,9 @@ function displayBook() {
     `;
     const removeBtn = document.createElement('button');
     removeBtn.innerHTML = 'Remove';
-    const library = new Library();
     removeBtn.addEventListener('click', () => {
-      library.removeBook(element);
+      const library = new Library(element);
+      library.removeBook();
       li.remove();
       displayBook();
     });
