@@ -1,12 +1,6 @@
-let Books = JSON.parse(localStorage.getItem('Books')) ?? [];
+import Book from './book.js';
 
-class Book {
-  constructor(title, author) {
-    this.id = Math.random() * 100;
-    this.title = title;
-    this.author = author;
-  }
-}
+let Books = JSON.parse(localStorage.getItem('Books')) ?? [];
 
 class Library {
   constructor(book) {
