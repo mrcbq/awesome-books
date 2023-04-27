@@ -1,6 +1,12 @@
 import Book from './book.js';
 
-let Books = JSON.parse(localStorage.getItem('Books')) ?? [];
+let Books = JSON.parse(localStorage.getItem('Books')) ?? [
+  {
+    id: 0,
+    title: 'El coronel no tiene quien le escriba',
+    author: 'Gabriel Garcia Marquez',
+  },
+];
 
 class Library {
   constructor(book) {
@@ -26,7 +32,7 @@ function displayBook() {
     const li = document.createElement('li');
     li.setAttribute('id', element.id);
     li.innerHTML = `
-    <p> "${element.title}" By ${element.author} </p> 
+    <p><b> "${element.title}" </b> By ${element.author} </p> 
     `;
     const removeBtn = document.createElement('button');
     removeBtn.innerHTML = 'Remove';
@@ -81,18 +87,14 @@ const addNewBtn = document.querySelector('.navNew');
 const contactBtn = document.querySelector('.navContact');
 const contactInfo = document.querySelector('.contact');
 
-listBtn.addEventListener('click', () => {
+function showList() {
   bookList.style.display = 'block';
   formContainer.style.display = 'none';
   contactInfo.style.display = 'none';
   displayBook();
-});
+}
 
-window.addEventListener('load', () => {
-  bookList.style.display = 'none';
-  formContainer.style.display = 'none';
-  contactInfo.style.display = 'none';
-});
+listBtn.addEventListener('click', showList);
 
 addNewBtn.addEventListener('click', () => {
   bookList.style.display = 'none';
@@ -107,6 +109,14 @@ contactBtn.addEventListener('click', () => {
 });
 
 const currentDate = new Date().toLocaleString('default', {
-  month: 'long', year: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
+  month: 'long',
+  year: 'numeric',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: true,
 });
 document.getElementById('date').innerHTML = currentDate;
+
+showList();
